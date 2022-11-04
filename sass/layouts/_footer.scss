@@ -1,0 +1,47 @@
+footer {
+    z-index: 3;
+    height: 190px;
+    width: 100%;
+    background-color: rgb(68, 67, 67);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h2{
+        font-weight: normal;
+    }
+    i{
+        width: 23px;
+        font-size: 12px;
+        padding-right: 10px;
+    }
+
+
+}
+
+.footer__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    a:link {
+        color: white;
+        text-decoration: none;
+
+    }
+
+    a:visited {
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(212, 191, 202);
+    }
+
+    a:active {
+        color: white;
+    }
+
+}

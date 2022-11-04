@@ -1,0 +1,199 @@
+.loading {
+    opacity: 70%;
+    position: fixed;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: timer .2s 1s;
+    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes timer {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.spinner {
+    z-index: 2;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 3px solid rgba(177, 8, 8, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body{
+    background-color: $color-background;
+}
+
+main {
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 350px;
+    @include large-screen {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+
+.company-info {
+    @include section-block;
+    gap: 1px;
+    background-color: $color-gray;
+    @include large-screen {
+        margin-right: 20px;
+    }
+    @include mobile-screen{
+        height: auto;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    &__location {
+        display: flex;
+        position: relative;
+        bottom: 2px;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-gray-dark;
+        height: 45px;
+        width: 100%;
+        font-size: 30px;
+        font-weight: bold;
+        box-shadow: 0px 5px 2px -1px #5e433e inset;
+        i {
+            padding-right: 10px;
+        }
+        @include large-screen {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0px 5px 2px -1px #5e433e;
+        }
+    }
+
+    &__title {
+        img{
+            border-radius: 8px;
+            margin: 15px;
+        }
+        b{
+            font-size: 25px;
+            margin-right: 10px;
+        }
+        margin: 15px;
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+    }
+
+    &__text{
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        line-height: 25px;
+    }
+}
+
+.how-it-works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include section-block;
+    font-weight: bold;
+    font-size: 25px;
+    @include large-screen {
+        padding-top: 10px;
+        align-items: center;
+    }
+    p {
+        padding-right: 150px;
+        padding-bottom: 0px;
+
+    }
+    ol {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        list-style: none;
+    }
+
+    &__numbers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        color: rgb(254, 251, 146);
+        background-color: $color-primary;
+        position: relative;
+        right: 12px;
+        padding-top: 4px;
+        i{
+            position: relative;
+            left: 5px;
+            font-size: 4px;
+        }
+    }
+    li {
+        display: flex;
+        align-self: center;
+        border-radius: 20px;
+        height: 65px;
+        width: 320px;
+        font-size: 15px;
+        @include area-shadow;
+        background-color: $color-gray-dark;
+        padding-top: 25px;
+        i {
+            font-size: 20px;
+            padding-left: 15px;
+            padding-right: 30px;
+        }
+    }
+}
+
+.restaurants {
+    width: 100%;
+    min-width: 350px;
+    background-color: $color-gray;
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    p {
+        align-self: flex-start;
+        padding-top: 40px;
+        padding-left: 8%;
+        padding-bottom: 25px;
+        @include large-screen {
+            align-self: center;
+            padding-left: 0;
+        }
+    }
+}
+

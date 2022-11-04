@@ -1,0 +1,31 @@
+#message {
+    height: 200px;
+    width: 500px;
+    resize: none;
+    border-radius: 7px;
+    margin: 5px;
+    background-color: #b1908a;
+    &:focus{
+        outline: none;
+    }
+    @include mobile-screen{
+        width: 350px;
+    }
+}
+
+#name, #email, #subject{
+    border-radius: 7px;
+    margin: 5px;
+    background-color: #b1908a;
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}
+
+.form-container{
+    background-color: $color-gray;
+    border-radius: 7px;
+    height: 400px;
+}
+

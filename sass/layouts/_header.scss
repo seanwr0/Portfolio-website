@@ -1,0 +1,58 @@
+.header {
+    background-color: #FF7F51;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to bottom, white, $color-gray);
+
+    a:link {
+        position: relative;
+        right: 40px;
+        color: black;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: black;
+
+    }
+
+    &__text {
+        padding-left: 50px;
+    }
+
+    i {
+
+
+        font-size: 25px;
+    }
+
+    img {
+        @include area-shadow;
+        height: 330px;
+        width: 100%;
+        object-fit: cover;
+
+
+        @include large-screen {
+
+            width: 80%;
+        }
+    }
+
+    @include large-screen {
+        height: 475px;
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    }
+}

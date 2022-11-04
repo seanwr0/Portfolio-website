@@ -1,0 +1,976 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  font-family: "Shrikhand", cursive;
+}
+
+footer {
+  font-family: "Shrikhand", cursive;
+}
+footer a:link {
+  font-family: "Roboto", sans-serif;
+}
+
+.carousel-heading, .carousel-heading2, .carousel-heading3 {
+  font-family: "Shrikhand", cursive;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS */
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+.menu-area {
+  animation: up 1s 1s;
+  animation-fill-mode: both;
+  display: flex;
+  width: 100%;
+  min-width: 350px;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  background-color: #8C6057;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  position: relative;
+  gap: 20px;
+  height: 350px;
+  width: 360px;
+}
+.menu-area__2 {
+  animation-duration: 3s;
+}
+.menu-area__3 {
+  animation-duration: 5s;
+}
+@keyframes up {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.menu-area__fade {
+  z-index: 2;
+  position: absolute;
+  width: 360px;
+  background-color: #8C6057;
+  height: 106%;
+  left: -10;
+  border-width: 0px;
+  animation: fade-in 1.5s 0.7s;
+  animation-fill-mode: forwards;
+}
+@media screen and (min-width: 768px) {
+  .menu-area__fade {
+    width: 750px;
+    height: 110%;
+    left: -22px;
+    bottom: -24px;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    z-index: -1;
+  }
+}
+.menu-area__fade-2 {
+  animation-delay: 1.5s;
+}
+.menu-area__fade-3 {
+  animation-delay: 2s;
+}
+@media screen and (min-width: 768px) {
+  .menu-area {
+    width: 600px;
+    height: 450px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px 5px #5e433e;
+    background-color: #8C6057;
+  }
+}
+.menu-area h3 {
+  padding-top: 10px;
+  padding-left: 15px;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .menu-area h3 {
+    padding-left: 140px;
+  }
+}
+.menu-area h3::after {
+  content: "";
+  display: block;
+  width: 49px;
+  padding-top: 3px;
+  border-bottom: 3.5px solid #99E2D0;
+}
+@media screen and (min-width: 768px) {
+  .menu-area {
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.menu-area__large {
+  position: relative;
+  bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .menu-area__large {
+    bottom: 0px;
+  }
+}
+
+.food-card {
+  overflow: hidden;
+  box-shadow: 0px 5px 15px 5px #5e433e;
+  padding-top: 8px;
+  padding-left: 10px;
+  width: 330px;
+  height: 60px;
+  border-radius: 15px;
+}
+.food-card h4 {
+  margin-bottom: 10px;
+}
+.food-card:hover {
+  cursor: pointer;
+}
+.food-card:hover > .card-animation {
+  left: 257px;
+  transition: 1.4s;
+}
+.food-card:hover > .cost {
+  left: 220px;
+  transition: 1s 0.2s;
+}
+.food-card:hover > .card-animation i {
+  animation: spin 0.9s ease-in-out 1;
+}
+.food-card:hover > .food-card__text p {
+  width: 220px;
+  transition: 1s 0.2s;
+}
+
+.food-card__text p {
+  transition: width 1s ease;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cost {
+  transition: left 1s ease;
+  height: 50px;
+  width: 30px;
+  position: relative;
+  bottom: 19px;
+  left: 270px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.cost i {
+  font-size: 12px;
+}
+
+.card-animation {
+  transition: left 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 75px;
+  position: relative;
+  bottom: 105px;
+  left: 340px;
+  background: #99E2D0;
+}
+.card-animation i {
+  color: #99E2D0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  font-size: 12px;
+  background-color: white;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ----- container stylings: 
+-> centers the whole content of the page
+-> defines width and height for container ----- */
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 800px;
+  height: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  #carousel {
+    display: none;
+  }
+  .carousel-container {
+    width: auto;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  #project-cards {
+    display: none;
+  }
+}
+/* provides padding to main heading */
+.main-heading {
+  padding: 2rem 0 2rem 0;
+  font-size: 40px;
+}
+
+.content {
+  height: 85%;
+  position: relative;
+}
+
+/* ----- carousel content stylings ----- */
+/* places the carousel content on center of the carousel */
+.carousel-content {
+  position: absolute;
+  /*to center the content horizontally and vertically*/
+  top: 28%;
+  left: 16.7%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 50;
+  border-radius: 7px;
+}
+
+.carousel-content2 {
+  position: absolute;
+  /*to center the content horizontally and vertically*/
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 51;
+  border-radius: 7px;
+}
+
+.carousel-content3 {
+  position: absolute;
+  /*to center the content horizontally and vertically*/
+  top: 40%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 51;
+  border-radius: 7px;
+}
+
+.carousel-heading {
+  font-size: 3rem;
+  color: #0065FC;
+  margin-bottom: 1rem;
+}
+
+.carousel-heading2 {
+  font-size: 3rem;
+  color: #9356DC;
+  margin-bottom: 1rem;
+}
+
+.carousel-heading3 {
+  font-size: 3rem;
+  color: goldenrod;
+  margin-bottom: 1rem;
+}
+
+/*----- end of carousel content stylings ----- */
+/* ----- slideshow stylings ----- */
+.slideshow {
+  height: 80%;
+  overflow: hidden;
+  /* to hide slides in x-direction */
+  position: relative;
+  border-radius: 7px;
+}
+
+/* wrapper which wraps all the slideshow images stylings */
+.slideshow-wrapper {
+  display: flex;
+  /* We give it width as 400% because we are making a 
+     4 image carousel. If you want to make for example, 
+     5 images carousel, then give width as 500%. */
+  width: 300%;
+  height: 100%;
+  position: relative;
+  left: 200px;
+  /* you can change the animation settings from below */
+  animation: slideshow 20s infinite;
+  border-radius: 7px;
+}
+
+/* define width and height for images*/
+.slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 7px;
+}
+
+/* @keyframes are used to provide animations
+   We make these settings for 4 image carousel.
+   Make modification according to your needs. */
+@keyframes slideshow {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 0;
+  }
+  15% {
+    left: -100%;
+  }
+  25% {
+    left: -100%;
+  }
+  30% {
+    left: -200%;
+  }
+  40% {
+    left: -200%;
+  }
+  60% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -100%;
+  }
+  85% {
+    left: -100%;
+  }
+  90% {
+    left: 0%;
+  }
+}
+/* ----- end of slideshow stylings ----- */
+/* ----- carousel control buttons stylings ----- */
+.slide-btn {
+  background-color: #bbb;
+  border-radius: 50%;
+  border: 0.2rem solid #d38800;
+  width: 1.2rem;
+  height: 1.2rem;
+  outline: none;
+  cursor: pointer;
+  /* stylings for positioning the buttons at
+     the bottom of the carousel */
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 70;
+}
+
+/* As we provide position as absolute, 
+the buttons places one over the other. 
+So, we have to place them individually
+at their correct positions. */
+.slide-btn-1 {
+  left: 45%;
+}
+
+.slide-btn-2 {
+  left: 50%;
+}
+
+.slide-btn-3 {
+  left: 55%;
+}
+
+.slide-btn-4 {
+  left: 60%;
+}
+
+/* When we focus on the particular button, 
+the animation stops to that particular image 
+to which the button is associated. */
+.slide-btn-1:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: 0;
+}
+
+.slide-btn-2:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -100%;
+}
+
+.slide-btn-3:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -200%;
+}
+
+.slide-btn-4:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -300%;
+}
+
+/* when we focus on the button, the background color changes */
+.slide-btn:focus {
+  background-color: #308d46;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.cards a:link {
+  text-decoration: none;
+  color: black;
+}
+.cards a:visited {
+  color: black;
+}
+.cards a:hover {
+  color: black;
+}
+.cards a:active {
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.card {
+  box-shadow: 0px 5px 15px 5px #5e433e;
+  background-color: #FCFDAF;
+  width: 360px;
+  height: 300px;
+  border-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    height: 350px;
+    width: 320px;
+  }
+}
+.card__image {
+  position: relative;
+}
+.card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 170px;
+  width: 100%;
+  object-fit: fill;
+}
+@media screen and (min-width: 768px) {
+  .card img {
+    height: 250px;
+  }
+}
+.card h3 {
+  padding: 0%;
+  font-size: 21px;
+}
+.card p {
+  padding: 0%;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+#message {
+  height: 200px;
+  width: 500px;
+  resize: none;
+  border-radius: 7px;
+  margin: 5px;
+  background-color: #b1908a;
+}
+#message:focus {
+  outline: none;
+}
+@media screen and (max-width: 768px) {
+  #message {
+    width: 350px;
+  }
+}
+
+#name, #email, #subject {
+  border-radius: 7px;
+  margin: 5px;
+  background-color: #b1908a;
+  border: none;
+}
+#name:focus, #email:focus, #subject:focus {
+  outline: none;
+}
+
+.form-container {
+  background-color: #8C6057;
+  border-radius: 7px;
+  height: 400px;
+}
+
+.header {
+  background-color: #FF7F51;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(to bottom, white, #8C6057);
+}
+.header-menu a:link {
+  position: relative;
+  right: 40px;
+  color: black;
+  text-decoration: none;
+}
+.header-menu a:visited {
+  color: black;
+}
+.header-menu__text {
+  padding-left: 50px;
+}
+.header-menu i {
+  font-size: 25px;
+}
+.header-menu img {
+  box-shadow: 0px 5px 15px 5px #5e433e;
+  height: 330px;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .header-menu img {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-menu {
+    height: 475px;
+    background: linear-gradient(to bottom right, #9c813e, #d6a936);
+  }
+}
+
+footer {
+  z-index: 3;
+  height: 190px;
+  width: 100%;
+  background-color: rgb(68, 67, 67);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer h2 {
+  font-weight: normal;
+}
+footer i {
+  width: 23px;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer__links a:link {
+  color: white;
+  text-decoration: none;
+}
+.footer__links a:visited {
+  color: white;
+}
+.footer__links a:hover {
+  color: rgb(212, 191, 202);
+}
+.footer__links a:active {
+  color: white;
+}
+
+.loading {
+  opacity: 70%;
+  position: fixed;
+  background-color: gray;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: timer 0.2s 1s;
+  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes timer {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.spinner {
+  z-index: 2;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 3px solid rgba(177, 8, 8, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background-color: #FCFDAF;
+}
+
+main {
+  background-color: #FCFDAF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 350px;
+}
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+.company-info {
+  display: flex;
+  width: 100%;
+  min-width: 350px;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  gap: 1px;
+  background-color: #8C6057;
+}
+@media screen and (min-width: 768px) {
+  .company-info {
+    width: 600px;
+    height: 450px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px 5px #5e433e;
+    background-color: #8C6057;
+  }
+}
+@media screen and (min-width: 768px) {
+  .company-info {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .company-info {
+    height: auto;
+  }
+}
+.company-info a:link {
+  text-decoration: none;
+}
+.company-info__location {
+  display: flex;
+  position: relative;
+  bottom: 2px;
+  justify-content: center;
+  align-items: center;
+  background-color: #6d4f4a;
+  height: 45px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  box-shadow: 0px 5px 2px -1px #5e433e inset;
+}
+.company-info__location i {
+  padding-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .company-info__location {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 5px 2px -1px #5e433e;
+  }
+}
+.company-info__title {
+  margin: 15px;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+}
+.company-info__title img {
+  border-radius: 8px;
+  margin: 15px;
+}
+.company-info__title b {
+  font-size: 25px;
+  margin-right: 10px;
+}
+.company-info__text {
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 25px;
+}
+
+.how-it-works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  min-width: 350px;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  font-weight: bold;
+  font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+  .how-it-works {
+    width: 600px;
+    height: 450px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px 5px #5e433e;
+    background-color: #8C6057;
+  }
+}
+@media screen and (min-width: 768px) {
+  .how-it-works {
+    padding-top: 10px;
+    align-items: center;
+  }
+}
+.how-it-works p {
+  padding-right: 150px;
+  padding-bottom: 0px;
+}
+.how-it-works ol {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+}
+.how-it-works__numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: rgb(254, 251, 146);
+  background-color: #d6a936;
+  position: relative;
+  right: 12px;
+  padding-top: 4px;
+}
+.how-it-works__numbers i {
+  position: relative;
+  left: 5px;
+  font-size: 4px;
+}
+.how-it-works li {
+  display: flex;
+  align-self: center;
+  border-radius: 20px;
+  height: 65px;
+  width: 320px;
+  font-size: 15px;
+  box-shadow: 0px 5px 15px 5px #5e433e;
+  background-color: #6d4f4a;
+  padding-top: 25px;
+}
+.how-it-works li i {
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
+.restaurants {
+  width: 100%;
+  min-width: 350px;
+  background-color: #8C6057;
+  font-weight: bold;
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.restaurants p {
+  align-self: flex-start;
+  padding-top: 40px;
+  padding-left: 8%;
+  padding-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants p {
+    align-self: center;
+    padding-left: 0;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  background-color: #8C6057;
+}
+
+.name {
+  display: flex;
+  width: 100%;
+  min-width: 350px;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  font-size: 20px;
+  position: relative;
+  bottom: 30px;
+  width: 100%;
+  height: 50px;
+  background-color: #8C6057;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10px;
+  padding-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .name {
+    width: 600px;
+    height: 450px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px 5px #5e433e;
+    background-color: #8C6057;
+  }
+}
+@media screen and (min-width: 768px) {
+  .name {
+    box-shadow: 0px 5px 15px 8px #4c3936;
+    z-index: 3;
+    top: 15px;
+    padding: 0px;
+    margin: 0px;
+    width: 600px;
+    height: 100px;
+    padding-top: 12px;
+    padding-left: 12px;
+    background: linear-gradient(to bottom right, #99E2D0, #d6a936);
+  }
+}
+.name h2 {
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,236 @@
+.menu-area {
+
+    animation: up 1s 1s;
+    animation-fill-mode: both;
+
+    &__2{
+        animation-duration: 3s;
+    }
+
+    &__3{
+        animation-duration: 5s;
+    }
+
+
+
+
+    @keyframes up {
+        0% {
+            transform: translateY(30px);
+        }
+
+        100% {
+            transform: translateY(0px);
+
+        }
+
+    }
+
+    &__fade {
+        z-index: 2;
+        position: absolute;
+        width: 360px;
+        background-color: $color-gray;
+        height: 106%;
+        left: -10;
+        border-width: 0px;
+
+        animation: fade-in 1.5s .7s;
+        animation-fill-mode: forwards;
+
+        @include large-screen {
+            width: 750px;
+            height: 110%;
+            left: -22px;
+            bottom: -24px;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 100%;
+            }
+
+            100% {
+                opacity: 0%;
+                z-index: -1;
+            }
+
+
+        }
+
+    }
+
+    &__fade-2 {
+        animation-delay: 1.5s;
+    }
+
+
+    &__fade-3 {
+        animation-delay: 2s;
+    }
+
+    @include section-block;
+    background-color: $color-gray;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    position: relative;
+    gap: 20px;
+    height: 350px;
+    width: 360px;
+
+
+
+    h3 {
+        padding-top: 10px;
+        padding-left: 15px;
+        align-self: flex-start;
+        @include large-screen{
+            padding-left: 140px;
+        }
+
+
+        &::after {
+            content: "";
+
+            display: block;
+            width: 49px;
+            padding-top: 3px;
+            border-bottom: 3.5px solid $color-tertiary;
+        }
+
+
+    }
+
+    @include large-screen {
+        justify-content: center;
+        align-items: center;
+        bottom: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__large{
+        position: relative;
+        bottom: 20px;
+        @include large-screen{
+            bottom: 0px;
+        }
+    }
+}
+
+
+
+// menu item cards 
+.food-card {
+    overflow: hidden;
+    @include area-shadow;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: 330px;
+    height: 60px;
+    border-radius: 15px;
+
+    h4 {
+
+        margin-bottom: 10px;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &>.card-animation {
+            left: 257px;
+            transition: 1.4s;
+        }
+
+        &>.cost {
+            left: 220px;
+            transition: 1s .2s;
+
+        }
+
+        &>.card-animation i {
+            animation: spin .90s ease-in-out 1;
+        }
+
+        &>.food-card__text p {
+            width: 220px;
+            transition: 1s .2s;
+        }
+    }
+
+
+
+}
+
+.food-card__text {
+
+    p {
+        transition: width 1s ease;
+        width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+}
+
+
+
+.cost {
+    transition: left 1s ease;
+    height: 50px;
+    width: 30px;
+    position: relative;
+    bottom: 19px;
+    left: 270px;
+    white-space: nowrap;
+    font-size: 14px;
+
+
+    i {
+        font-size: 12px
+    }
+
+
+}
+
+
+.card-animation {
+    transition: left 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 75px;
+    position: relative;
+    bottom: 105px;
+    left: 340px;
+
+    background: ($color-tertiary);
+
+    i {
+        color: $color-tertiary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+        background-color: white;
+
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+    }
+
+
+}
