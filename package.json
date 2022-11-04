@@ -1,0 +1,13 @@
+{
+  "name": "project-3",
+  "version": "1.0.0",
+  "description": "sass",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/prefixed/style.css",
+    "prefix": "postcss ./css/prefixed/style.css --use autoprefixer -d ./css/prefixed"
+  },
+  "author": "sean",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}
